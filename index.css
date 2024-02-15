@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+ #textArea1{}
+
+section{
+   margin-top: 5vh; 
+ }
+ .form-control{    
+    background-color: rgb(240, 240, 240);
+ }
+ 
+ .form-group{     
+    border-radius: 10px;       
+    box-shadow: 7px 7px 7px rgb(201, 201, 201);
+ }
+ 
+ .buttons{
+    margin-top: 2vh;
+    /*background-color: rgb(6, 252, 252);*/
+ }
+ .btn{
+    box-shadow: 5px 5px 5px rgb(200, 200, 200);
+ }
