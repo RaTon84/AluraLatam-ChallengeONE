@@ -27,7 +27,9 @@ section{
     box-shadow: 5px 5px 5px 1px rgb(150, 150, 150);
  } 
  .buttons{
-    margin-top: 2vh;    
+    margin-top: 2vh;  
+    display: flex;
+    justify-content: space-around;    
  }
  .btn{
     box-shadow: 3px 3px 5px 1px rgb(150, 150, 150);
