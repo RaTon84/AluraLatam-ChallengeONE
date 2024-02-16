@@ -3,39 +3,13 @@
     padding: 0;
  }
  body{
-   /*background-color: rgb(220, 220, 220);*/
+   
  }
  header{
    margin-top: 3vh;
    display: flex;
    justify-content: space-between;
  }
- .form-check{  
-  
- }
- .custom-control-label{  
-   background-color: aqua;   
- }
- .form-check-input{
-   background-color: rgb(255, 196, 69);
-   
- }
- .form-switch .form-check-input {
-   height: 24px;
-   width: 48px;
-}
-.form-switch .form-check-input:focus {
-   border-color: rgba(0, 0, 0, 0.25);
-   outline: 0;
-   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/></svg>");
-}
-.form-switch .form-check-input:checked {
-   background-color: #080808;
-   border-color: #30D158;
-   border: none;
-   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(255,255,255,1.0)'/></svg>");
-}
 h1{
    margin-top: 5vh;
    text-align: center;
@@ -46,18 +20,17 @@ section{
    margin-top: 5vh; 
  }
  .form-control{    
-    background-color: rgb(240,240,240);
+    /*background-color: rgb(240,240,240);*/
  } 
  .form-group{     
     border-radius: 3px;       
-    box-shadow: 7px 7px 9px 5px rgb(201, 201, 201);
+    box-shadow: 5px 5px 5px 1px rgb(150, 150, 150);
  } 
  .buttons{
     margin-top: 2vh;    
  }
  .btn{
-    box-shadow: 5px 5px 3px rgb(200, 200, 200);
-    margin-right: 5%;
+    box-shadow: 3px 3px 5px 1px rgb(150, 150, 150);
  }  
  @media (max-width: 1024px){
    
@@ -65,6 +38,11 @@ section{
  @media (max-width: 768px){  
    .btn{
       --bs-btn-padding-y: .40rem; --bs-btn-padding-x: .8rem; --bs-btn-font-size: .90rem;      
-      box-shadow: none;
+      /*box-shadow: none;*/
    }   
+ }
+ $color-mode-type: data;
+
+ @each $color, $value in $theme-colors-text-dark {
+   ba;
  }

@@ -10,7 +10,7 @@ function encriptar() {
             .replace(/o/gi, "lopw")
             .replace(/u/gi, "iku")            
             console-console.log(textEncript);
-        document.getElementById("textArea2").value = textEncript               
+        document.getElementById("textArea2").value = textEncript;               
     }
 };
 function desencriptar() {
@@ -25,10 +25,24 @@ function desencriptar() {
             .replace(/lopw/gi, "o")
             .replace(/iku/gi, "u")          
             console-console.log(textEncript);
-        document.getElementById("textArea2").value = textEncript               
+        document.getElementById("textArea2").value = textEncript;              
     }
 };
-function copiar(){
-    var copy = document.getElementById("textArea2").value;
-    
+function copiar(){      
+    navigator.clipboard.writeText(document.getElementById("textArea2").value);
+    document.getElementById("textArea2").value = "";
+}
+var modo="light";
+function cambiarModo(){    
+    if(modo=="light"){
+        document.querySelector('body').setAttribute("data-bs-theme","dark");
+        modo="oscuro";
+        document.querySelector("#iconoModo").setAttribute("class", "bi bi-brightness-high-fill");
+        document.querySelector("#iconoModo").setAttribute("style", "color: yellow;");
+    }else{
+        document.querySelector('body').setAttribute("data-bs-theme","light");
+        modo="light";
+        document.querySelector("#iconoModo").setAttribute("class", "bi bi-moon-fill ");
+        document.querySelector("#iconoModo").setAttribute("style", "color: black;");
+    }
 }
