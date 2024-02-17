@@ -23,32 +23,37 @@
             <i class="bi bi-moon-fill" id="iconoModo"></i>
         </button>
     </header>
-    <main>
+    <main class="container-fluid">
         <h1>Challenge-ONE</h1>
-        <section>
-            <form class="container" id="">
-                <h2>Encriptador de texto</h2>
-                <div class="form-group">
-                    <textarea placeholder="Ingrese el texto aqui..." class="form-control" id="textArea1"
-                        rows="10"></textarea>
-                </div>
-                <div class="buttons">
-                    <button type="button" class="btn btn-info btn-m" onclick="encriptar()">Encriptar</button>
-                    <button type="button" class="btn btn-info btn-m" onclick="desencriptar()">Desencriptar</button>
-                </div>
-            </form>
-        </section>
-        <section>
-            <form class="container">
-                <h3>Resultado</h3>
-                <div class="form-group">
-                    <textarea placeholder="" class="form-control" id="textArea2" rows="6"></textarea>
-                </div>
-                <div class="buttons">
-                    <button type="button" class="btn btn-info btn-m" onclick="copiar()">Copiar</button>
-                </div>
-            </form>
-        </section>
+        <h3>Encriptador de texto</h3><br>
+        <div class="row">
+            <section class="col">
+                <form class="container" id="">
+                    <h3>ENCRIPTAR</h3>
+                    <div class="form-group">
+                        <textarea placeholder="Ingrese el texto aqui..." class="form-control" id="textArea1"
+                            rows="15"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-info btn-m" onclick="encriptar()">Encriptar</button>
+                        <button type="button" class="btn btn-info btn-m" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </form>
+            </section>
+            <section class="col">
+                <form class="container">
+                    <h3>RESULTADO</h3>
+                    <div class="form-group">
+                        <textarea placeholder="" class="form-control" id="textArea2" rows="15"></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn btn-info btn-m" onclick="copiar()">Copiar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        
+        
     </main>
     <footer class="container">
         <div class="row mt-5">
