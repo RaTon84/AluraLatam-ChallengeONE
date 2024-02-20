@@ -3,7 +3,7 @@
     padding: 0;
  }
  body{
-   margin: 1% 10%;
+   margin: 1% 15%;
  }
  header{
    margin-top: 3vh;
@@ -13,11 +13,12 @@
 h1{
    margin-top: 5vh;
    text-align: center;
-   font-family: fantasy;
+   font-family: 'Courier New', Courier, monospace;
    font-size: xxx-large;
  }
  h3{
    text-align: center;
+   font-family: 'Courier New', Courier, monospace;
  }
 section{
    margin-top: 5vh; 
@@ -38,7 +39,7 @@ section{
     box-shadow: 3px 3px 5px 1px rgb(150, 150, 150);
  }  
  footer{
-   font-family: ;
+   text-align: center;
  }
  @media (max-width: 1024px){
    body{
