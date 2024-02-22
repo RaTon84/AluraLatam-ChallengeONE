@@ -3,30 +3,65 @@
     padding: 0;
  }
  body{
-   margin: 1% 15%;
+   margin: 0 15%;
  }
  header{
    margin-top: 3vh;
    display: flex;
    justify-content: space-between;
  }
+ #typing{
+   width: 100%;   
+   display: flex;
+   align-items: center;
+   justify-content: center;   
+ }
 h1{
-   margin-top: 5vh;
-   text-align: center;
+   margin-top: 5vh;  
    font-family: 'Courier New', Courier, monospace;
    font-size: xxx-large;
+   text-shadow: 5px 2px 3px rgb(150, 150, 150);  
+ }
+ /*----maquina de escribir CSS-----------------------------------------------------------*/
+ /*#subtitulo{   
+   width:  340px;   
+   animation: animacion 3.5s steps(25), transparent .5s step-end infinite alternate;
+   white-space: nowrap;
+   overflow: hidden;  
+   border-right: 2px solid;   
+ } 
+ @keyframes animacion {
+   from {
+     width: 0px
+   }
+ }     
+ @keyframes transparent {
+   50% {
+     border-color: transparent
+   }
+ }*/
+ /*-----------------------------------------------------------------*/
+ h2{
+   text-align: center;
+   font-family: 'Courier New', Courier, monospace;
+   margin-bottom: 7%;
  }
  h3{
    text-align: center;
    font-family: 'Courier New', Courier, monospace;
-   margin-bottom: 5%;
+   margin-bottom: 3%;
  }
 section{
-   margin-top: 5vh; 
+   margin-top: 5vw; 
  }
  .form-group{     
     border-radius: 3px;       
     box-shadow: 5px 5px 5px 1px rgb(150, 150, 150);
+ }
+ #textArea2{
+   background-image: url(./img/Muñeco.png);
+   background-repeat: no-repeat;
+   background-position: center;   
  }
  .buttons{
     margin-top: 2vh;  
@@ -37,12 +72,29 @@ section{
     box-shadow: 3px 3px 5px 1px rgb(150, 150, 150);
  }  
  footer{
-   text-align: center;
+   margin-top: 3vw;
+   text-align: center;   
  }
+ #lista-redes{   
+   list-style: none;
+   display: flex;
+   justify-content: center;     
+ }
+ li{  
+   /*margin-right: 5vw;*/
+   margin: 0px 4vw;
+ }
+ li i{
+   color:   #164172 ;  
+   font-size:  xx-large;
+ }
+#copy{
+   font-size: small;
+}
  @media (max-width: 1024px){
    body{
-      margin: 0% 1%;
-    }
+      margin: 0% 1%;      
+    }    
  }
  @media (max-width: 768px){ 
    section{
@@ -50,7 +102,8 @@ section{
    }
    .btn{
       --bs-btn-padding-y: .40rem; --bs-btn-padding-x: .8rem; --bs-btn-font-size: .90rem;      
-      /*box-shadow: none;*/
-   }
-
+   }  
+   li{  
+      margin-right: 10vw;
+    }
  }

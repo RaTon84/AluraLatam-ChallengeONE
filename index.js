@@ -12,7 +12,8 @@ function encriptar() {
             .replace(/u/gi, "iku")            
             console-console.log(textEncript);
         document.getElementById("textArea2").value = textEncript;  
-        location.href = "#result"             
+        location.href = "#result";
+        document.getElementById("textArea2").style = "background: none;";           
     }
 };
 function desencriptar() {
@@ -28,29 +29,36 @@ function desencriptar() {
             .replace(/iku/gi, "u")          
             console-console.log(textEncript);
         document.getElementById("textArea2").value = textEncript;
-        location.href = "#result"             
+        location.href = "#result";
+        document.getElementById("textArea2").style = "background: none;";              
     }
 };
+function sacarImagen(){
+    if (document.getElementById("textArea2").value.length == 0){
+        document.getElementById("textArea2").style = "background-image: url(./img/Muñeco.png)";
+    }else
+    document.getElementById("textArea2").style = "background: none;"; 
+}
 function copiar(){      
     navigator.clipboard.writeText(document.getElementById("textArea2").value);
     document.getElementById("textArea2").value = "";
     document.getElementById("textArea1").value = "";
-    location.href = "#encriptador"
+    location.href = "#encriptador";
+    document.getElementById("textArea2").style = "background-image: url(./img/Muñeco.png)";
 }
-/*function OcultarPlaceHolder(){
-    document.onfocus
-}*/
 var modo="light";
 function cambiarModo(){    
     if(modo=="light"){
-        document.querySelector('body').setAttribute("data-bs-theme","dark");
-        modo="oscuro";
+        document.querySelector('body').setAttribute("data-bs-theme","dark");        
         document.querySelector("#iconoModo").setAttribute("class", "bi bi-brightness-high-fill");
         document.querySelector("#iconoModo").setAttribute("style", "color: yellow;");
+        document.querySelector("#logo-imagen").setAttribute("src", "./img/logo-alura-white.png")
+        modo="oscuro";
     }else{
-        document.querySelector('body').setAttribute("data-bs-theme","light");
-        modo="light";
+        document.querySelector('body').setAttribute("data-bs-theme","light");        
         document.querySelector("#iconoModo").setAttribute("class", "bi bi-moon-fill ");
         document.querySelector("#iconoModo").setAttribute("style", "color: black;");
+        document.querySelector("#logo-imagen").setAttribute("src", "./img/logo-alura-black.png")
+        modo="light";
     }
 }

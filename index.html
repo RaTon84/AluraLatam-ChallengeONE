@@ -15,28 +15,32 @@
 <body data-bs-theme="light">
     <header class="container">
         <div class="logo">
-            <a href="https://www.aluracursos.com/" target="_blank">
-                <img src="./img/logo_oracleAlura-es.1686744883.svg" alt="logo-oracleAlura">
-            </a>            
+            <a href="https://www.aluracursos.com/" target="_blank">                
+                <img src="./img/logo-alura-black.png" alt="logo-oracleAlura" id="logo-imagen">
+            </a>
         </div>
         <button class="btn rounted-fill" onclick="cambiarModo()">
             <i class="bi bi-moon-fill" id="iconoModo"></i>
         </button>
     </header>
     <main class="container-fluid">
-        <h1>Challenge-ONE</h1>
-        <h3 id="encriptador">Encriptador de texto</h3><br>
+        <div id="typing">
+            <h1 id="titulo">Challenge-ONE</h1>
+        </div>   
+        <div id="typing">
+            <h2 id="subtitulo">Encriptador de texto</h2><br>
+        </div>     
         <div class="row">
             <section class="col">
                 <form class="container" id="input">
                     <h3>ENCRIPTAR</h3>
                     <div class="form-group">
-                        <textarea placeholder="Ingrese el texto aqui..." class="form-control" id="textArea1"
-                            rows="15"></textarea>
+                        <textarea placeholder="Ingrese el texto aqui..." class="form-control" id="textArea1" rows="15"></textarea>
                     </div>
                     <div class="buttons">
                         <button type="button" class="btn btn-success btn-m" onclick="encriptar()">Encriptar</button>
-                        <button type="button" class="btn btn-success btn-m" onclick="desencriptar()">Desencriptar</button>
+                        <button type="button" class="btn btn-success btn-m"
+                            onclick="desencriptar()">Desencriptar</button>
                     </div>
                 </form>
             </section>
@@ -44,7 +48,7 @@
                 <form class="container" id="result">
                     <h3>RESULTADO</h3>
                     <div class="form-group">
-                        <textarea placeholder="" class="form-control" id="textArea2" rows="15"></textarea>
+                        <textarea placeholder="" class="form-control" id="textArea2" rows="15" onclick="sacarImagen()"></textarea>
                     </div>
                     <div class="buttons">
                         <button type="button" class="btn btn-success btn-m" onclick="copiar()">Copiar</button>
@@ -52,12 +56,22 @@
                 </form>
             </section>
         </div>
-        
-        
+
+
     </main>
     <footer class="container">
-        <div class="row mt-5">
-            <p>Copyright 2024 © Hernan Viltez. Todos los derechos reservados.</p>
+        <ul id="lista-redes">
+            <li><a href="https://www.linkedin.com/in/hernan-viltez-434418297/" target="_blank">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </li>
+            <li><a href="mailto:hjviltez@gmail.com">
+                    <i class="bi bi-envelope-arrow-up-fill"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="row mt-1">
+            <p id="copy">Copyright 2024 © Hernan Viltez. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
