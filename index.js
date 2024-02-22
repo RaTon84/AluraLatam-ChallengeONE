@@ -11,7 +11,8 @@ function encriptar() {
             .replace(/o/gi, "lopw")
             .replace(/u/gi, "iku")            
             console-console.log(textEncript);
-        document.getElementById("textArea2").value = textEncript;               
+        document.getElementById("textArea2").value = textEncript;  
+        location.href = "#result"             
     }
 };
 function desencriptar() {
@@ -26,13 +27,19 @@ function desencriptar() {
             .replace(/lopw/gi, "o")
             .replace(/iku/gi, "u")          
             console-console.log(textEncript);
-        document.getElementById("textArea2").value = textEncript;              
+        document.getElementById("textArea2").value = textEncript;
+        location.href = "#result"             
     }
 };
 function copiar(){      
     navigator.clipboard.writeText(document.getElementById("textArea2").value);
     document.getElementById("textArea2").value = "";
+    document.getElementById("textArea1").value = "";
+    location.href = "#encriptador"
 }
+/*function OcultarPlaceHolder(){
+    document.onfocus
+}*/
 var modo="light";
 function cambiarModo(){    
     if(modo=="light"){
