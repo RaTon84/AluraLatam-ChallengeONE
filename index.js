@@ -2,7 +2,8 @@ function encriptar() {
     if (document.getElementById("textArea1").value.length == 0) {
         alert("ingrese un texto");      
     } else {
-        var text = document.getElementById("textArea1").value;        
+        var text = document.getElementById("textArea1").value.toLowerCase();
+        console.log(text)     
         var textEncript = text
             .replace(/a/gi, "rsyx")
             .replace(/e/gi, "dfg")
