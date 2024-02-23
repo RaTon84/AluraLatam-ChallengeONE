@@ -10,12 +10,24 @@
     <!--icons fonts-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./index.css">
+    <!--fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Dancing+Script:wght@700&family=Indie+Flower&family=Monoton&family=Rammetto+One&family=Seymour+One&family=Special+Elite&family=Tourney:wght@100&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Dancing+Script:wght@700&family=Indie+Flower&family=Monoton&family=Rammetto+One&family=Rubik+Doodle+Shadow&family=Seymour+One&family=Special+Elite&family=Tourney:wght@100&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chewy&family=Cinzel+Decorative:wght@400;700;900&family=Dancing+Script:wght@700&family=Indie+Flower&family=Monoton&family=Rammetto+One&family=Rubik+Doodle+Shadow&family=Seymour+One&family=Smooch+Sans:wght@100..900&family=Special+Elite&family=Tourney:wght@100&display=swap"
+        rel="stylesheet">
 </head>
 
 <body data-bs-theme="light">
     <header class="container">
         <div class="logo">
-            <a href="https://www.aluracursos.com/" target="_blank">                
+            <a href="https://www.aluracursos.com/" target="_blank">
                 <img src="./img/logo-alura-black.png" alt="logo-oracleAlura" id="logo-imagen">
             </a>
         </div>
@@ -26,16 +38,17 @@
     <main class="container-fluid">
         <div id="typing">
             <h1 id="titulo">Challenge-ONE</h1>
-        </div>   
+        </div>
         <div id="typing">
             <h2 id="subtitulo">Encriptador de texto</h2><br>
-        </div>     
+        </div>
         <div class="row">
             <section class="col">
                 <form class="container" id="input">
                     <h3>ENCRIPTAR</h3>
                     <div class="form-group">
-                        <textarea placeholder="Ingrese el texto aqui..." class="form-control" id="textArea1" rows="15"></textarea>
+                        <textarea placeholder="Ingrese el texto aqui..." class="form-control" id="textArea1"
+                            rows="15"></textarea>
                     </div>
                     <div class="buttons">
                         <button type="button" class="btn btn-success btn-m" onclick="encriptar()">Encriptar</button>
@@ -48,7 +61,8 @@
                 <form class="container" id="result">
                     <h3>RESULTADO</h3>
                     <div class="form-group">
-                        <textarea placeholder="" class="form-control" id="textArea2" rows="15" onclick="sacarImagen()"></textarea>
+                        <textarea placeholder="" class="form-control" id="textArea2" rows="15"
+                            onclick="sacarImagen()"></textarea>
                     </div>
                     <div class="buttons">
                         <button type="button" class="btn btn-success btn-m" onclick="copiar()">Copiar</button>
