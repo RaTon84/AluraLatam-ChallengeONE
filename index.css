@@ -1,29 +1,36 @@
 * {
-    margin: 0;
-    padding: 0;
- }
- body{
-   margin: 0 15%;
- }
- header{
-   margin-top: 3vh;
-   display: flex;
-   justify-content: space-between;
- }
- #typing{
-   width: 100%;   
-   display: flex;
-   align-items: center;
-   justify-content: center;   
- }
-h1{
-   margin-top: 5vh;  
-   font-family: 'Courier New', Courier, monospace;
-   font-size: xxx-large;
-   text-shadow: 5px 2px 3px rgb(150, 150, 150);  
- }
- /*----maquina de escribir CSS-----------------------------------------------------------*/
- /*#subtitulo{   
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 15%;
+}
+
+header {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+#typing {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 1vh;
+  font-size: 400%;
+  text-shadow: 5px 2px 9px rgb(150, 150, 150);
+}
+
+/*----maquina de escribir CSS-----------------------------------------------------------*/
+/*#subtitulo{   
    width:  340px;   
    animation: animacion 3.5s steps(25), transparent .5s step-end infinite alternate;
    white-space: nowrap;
@@ -40,70 +47,99 @@ h1{
      border-color: transparent
    }
  }*/
- /*-----------------------------------------------------------------*/
- h2{
-   text-align: center;
-   font-family: 'Courier New', Courier, monospace;
-   margin-bottom: 7%;
- }
- h3{
-   text-align: center;
-   font-family: 'Courier New', Courier, monospace;
-   margin-bottom: 3%;
- }
-section{
-   margin-top: 5vw; 
- }
- .form-group{     
-    border-radius: 3px;       
-    box-shadow: 5px 5px 5px 1px rgb(150, 150, 150);
- }
- #textArea2{
-   background-image: url(./img/Muñeco.png);
-   background-repeat: no-repeat;
-   background-position: center;   
- }
- .buttons{
-    margin-top: 2vh;  
-    display: flex;
-    justify-content: space-around;    
- }
- .btn{
-    box-shadow: 3px 3px 5px 1px rgb(150, 150, 150);
- }  
- footer{
-   margin-top: 3vw;
-   text-align: center;   
- }
- #lista-redes{   
-   list-style: none;
-   display: flex;
-   justify-content: center;     
- }
- li{  
-   /*margin-right: 5vw;*/
-   margin: 0px 4vw;
- }
- li i{
-   color:   #164172 ;  
-   font-size:  xx-large;
- }
-#copy{
-   font-size: small;
+/*-----------------------------------------------------------------*/
+h2 {
+  text-align: center;
+  margin-bottom: 7vh;
+  margin-top: 2vh;
+  font-family: "Special Elite", system-ui;
+  font-weight: 99;
+  font-style: normal;
 }
- @media (max-width: 1024px){
-   body{
-      margin: 0% 1%;      
-    }    
- }
- @media (max-width: 768px){ 
-   section{
-      margin-bottom: 10%;      
-   }
-   .btn{
-      --bs-btn-padding-y: .40rem; --bs-btn-padding-x: .8rem; --bs-btn-font-size: .90rem;      
-   }  
-   li{  
-      margin-right: 10vw;
-    }
- }
+
+h3 {
+  padding-left: 5vh;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 3%;
+}
+
+section {
+  margin-bottom: 2vh;
+}
+
+.form-group {
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 1px rgb(150, 150, 150);
+}
+
+#textArea2 {
+  background-image: url(./img/Muñeco.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.buttons {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  box-shadow: 3px 3px 5px 1px rgb(150, 150, 150);
+}
+
+footer {
+  margin-top: 2vw;
+  text-align: center;
+}
+
+#lista-redes {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  margin: 0px 2vw;
+}
+
+li i {
+  color: #164172;
+  font-size: xx-large;
+  text-shadow: 2px 2px 9px rgb(202, 202, 202);
+  /*animation: text-shadow: 2px 2px 9px rgb(180, 180, 180) 2.5s ;*/
+}
+
+#copy {
+  font-size: small;
+}
+
+@media (max-width: 1024px) {
+  body {
+    margin: 0% 1%;
+  }
+
+  h1 {
+    margin-top: 3vh;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 10%;
+  }
+
+  .btn {
+    --bs-btn-padding-y: .40rem;
+    --bs-btn-padding-x: .8rem;
+    --bs-btn-font-size: .90rem;
+  }
+
+  li {
+    margin-right: 10vw;
+  }
+
+  h1 {
+    margin-top: 5vh;
+  }
+}
