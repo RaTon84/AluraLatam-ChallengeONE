@@ -45,19 +45,17 @@ function encriptar() {
         msjEncriptar();
         setTimeout(function () {
             let timerInterval;
-            var text = document.getElementById("textArea1").value.toLowerCase();
-            console.log(text)
+            var text = document.getElementById("textArea1").value.toLowerCase();           
             var textEncript = text
                 .replace(/a/gi, "rsyx")
                 .replace(/e/gi, "dfg")
                 .replace(/i/gi, "nbm")
                 .replace(/o/gi, "lopw")
-                .replace(/u/gi, "iku")
-            console - console.log(textEncript);
-            document.getElementById("textArea2").value = textEncript;
-            location.href = "#textArea2";
-            document.getElementById("textArea2").style = "background: none;";
-        }, 1000);
+                .replace(/u/gi, "iku");           
+            document.getElementById("textArea2").value = textEncript;            
+            document.getElementById("textArea2").style = "background: none;";  
+            location.href = "#textArea2";          
+        }, 1000);      
     }
 };
 
@@ -73,11 +71,10 @@ function desencriptar() {
                 .replace(/dfg/gi, "e")
                 .replace(/nbm/gi, "i")
                 .replace(/lopw/gi, "o")
-                .replace(/iku/gi, "u")
-            console - console.log(textEncript);
+                .replace(/iku/gi, "u");
             document.getElementById("textArea2").value = textEncript;
-            location.href = "#textArea2";
             document.getElementById("textArea2").style = "background: none;";
+            location.href = "#textArea2";
         }, 1000);
     }
 };
@@ -96,9 +93,9 @@ function copiar() {
         Swal.fire("Mensaje Copiado");
         navigator.clipboard.writeText(document.getElementById("textArea2").value);
         document.getElementById("textArea2").value = "";
-        document.getElementById("textArea1").value = "";
-        location.href = "#encriptador";
+        document.getElementById("textArea1").value = "";        
         document.getElementById("textArea2").style = "background-image: url(./img/Muñeco.png)";
+        location.href = "#encriptador";
     }
 }
 
