@@ -49,7 +49,7 @@ function textoValidado() {
     var caracterValido = true;
     var texto = document.getElementById("textArea1").value;
     var tamañoTexto = document.getElementById("textArea1").value.length - 1;
-  
+
     while (i < tamañoTexto && texto[i].toUpperCase() === texto[i]) {
         if (texto.charAt(indice).toUpperCase() === texto.charAt(indice)) {
             caracterValido = false;
@@ -61,15 +61,15 @@ function textoValidado() {
     return caracterNoValido;
 
     for (var i in texto) {
-        console.log("pos"+ i + texto[i])
+        console.log("pos" + i + texto[i])
     }
     var texto = document.getElementById("textArea1").value;
-        var caracteresValidos = true;
-        for (var i in texto) {            
-            if(texto[i].toUpperCase() === texto[i]){
-                caracteresValidos = false;
-            }
-        } 
+    var caracteresValidos = true;
+    for (var i in texto) {
+        if (texto[i].toUpperCase() === texto[i]) {
+            caracteresValidos = false;
+        }
+    }
 }
 
 
@@ -82,18 +82,18 @@ function textoValidado() {
 
 function encriptar() {
     var texto = document.getElementById("textArea1").value;
-        var caracteresValidos = true;
-        for (var i in texto) {            
-            if(texto[i].toUpperCase() === texto[i]){
-                caracteresValidos = false;
-            }
-        } 
+    texto = texto.replace(/\s+/g, "");
+    var caracteresValidos = true;   
+    for (var i in texto) {
+        if (texto.charAt(i) > 97 || texto.charAt(i) < 122) {
+            caracteresValidos = false;            
+        }        
+    }
     if (document.getElementById("textArea1").value.length == 0) {
         msjIngreseTexto();
-    } else if(caracteresValidos){
+    } else if (caracteresValidos) {
         msjEncriptar();
         setTimeout(function () {
-            let timerInterval;
             var text = document.getElementById("textArea1").value.toLowerCase();
             var textEncript = text
                 .replace(/a/gi, "ai")
@@ -105,7 +105,7 @@ function encriptar() {
             document.getElementById("textArea2").style = "background: none;";
             location.href = "#textArea2";
         }, 1000);
-    } else {       
+    } else {
         alert("caracteres invalidos")
     }
 };
