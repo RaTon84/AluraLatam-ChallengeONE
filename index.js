@@ -38,24 +38,75 @@ function msjEncriptar() {
     });
 }
 
+function textoValidado() {
+    /*var textoCortado = document.getElementById("textArea1").value;
+    var tamañoTexto = document.getElementById("textArea1").value.length;
+    textoCortado.charAt(indice).toUpperCase() === textoCortado.charAt(indice);
+    for (i=0; i<=tamañoTexto; i++){
+        console.log(i +" de "+ tamañoTexto)
+    } */
+    var indice = 0;
+    var caracterValido = true;
+    var texto = document.getElementById("textArea1").value;
+    var tamañoTexto = document.getElementById("textArea1").value.length - 1;
+  
+    while (i < tamañoTexto && texto[i].toUpperCase() === texto[i]) {
+        if (texto.charAt(indice).toUpperCase() === texto.charAt(indice)) {
+            caracterValido = false;
+            console.log("entro")
+        }
+        i++;
+    }
+    console.log(tamañoTexto + " " + caracterNoValido + " " + indice)
+    return caracterNoValido;
+
+    for (var i in texto) {
+        console.log("pos"+ i + texto[i])
+    }
+    var texto = document.getElementById("textArea1").value;
+        var caracteresValidos = true;
+        for (var i in texto) {            
+            if(texto[i].toUpperCase() === texto[i]){
+                caracteresValidos = false;
+            }
+        } 
+}
+
+
+/*var textoCortado = document.getElementById("textArea1").value;
+        var tamañoTexto = document.getElementById("textArea1").value.length;
+        //textoCortado.charAt(indice).toUpperCase() === textoCortado.charAt(indice);
+        for (i=0; i<tamañoTexto; i++){
+            console.log(i +" de "+ tamañoTexto);            
+        } */
+
 function encriptar() {
+    var texto = document.getElementById("textArea1").value;
+        var caracteresValidos = true;
+        for (var i in texto) {            
+            if(texto[i].toUpperCase() === texto[i]){
+                caracteresValidos = false;
+            }
+        } 
     if (document.getElementById("textArea1").value.length == 0) {
         msjIngreseTexto();
-    } else {
+    } else if(caracteresValidos){
         msjEncriptar();
         setTimeout(function () {
             let timerInterval;
-            var text = document.getElementById("textArea1").value.toLowerCase();           
+            var text = document.getElementById("textArea1").value.toLowerCase();
             var textEncript = text
-                .replace(/a/gi, "rsyx")
-                .replace(/e/gi, "dfg")
-                .replace(/i/gi, "nbm")
-                .replace(/o/gi, "lopw")
-                .replace(/u/gi, "iku");           
-            document.getElementById("textArea2").value = textEncript;            
-            document.getElementById("textArea2").style = "background: none;";  
-            location.href = "#textArea2";          
-        }, 1000);      
+                .replace(/a/gi, "ai")
+                .replace(/e/gi, "enter")
+                .replace(/i/gi, "imes")
+                .replace(/o/gi, "ober")
+                .replace(/u/gi, "ufat");
+            document.getElementById("textArea2").value = textEncript;
+            document.getElementById("textArea2").style = "background: none;";
+            location.href = "#textArea2";
+        }, 1000);
+    } else {       
+        alert("caracteres invalidos")
     }
 };
 
@@ -67,11 +118,11 @@ function desencriptar() {
         setTimeout(function () {
             var text = document.getElementById("textArea1").value;
             var textEncript = text
-                .replace(/rsyx/gi, "a")
-                .replace(/dfg/gi, "e")
-                .replace(/nbm/gi, "i")
-                .replace(/lopw/gi, "o")
-                .replace(/iku/gi, "u");
+                .replace(/ai/gi, "a")
+                .replace(/enter/gi, "e")
+                .replace(/imes/gi, "i")
+                .replace(/ober/gi, "o")
+                .replace(/ufat/gi, "u");
             document.getElementById("textArea2").value = textEncript;
             document.getElementById("textArea2").style = "background: none;";
             location.href = "#textArea2";
@@ -93,7 +144,7 @@ function copiar() {
         Swal.fire("Mensaje Copiado");
         navigator.clipboard.writeText(document.getElementById("textArea2").value);
         document.getElementById("textArea2").value = "";
-        document.getElementById("textArea1").value = "";        
+        document.getElementById("textArea1").value = "";
         document.getElementById("textArea2").style = "background-image: url(./img/Muñeco.png)";
         location.href = "#encriptador";
     }
