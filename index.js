@@ -14,6 +14,14 @@ function msjSinTexto() {
     });
 }
 
+function msjCaracter(){
+    Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Solo se admiten letras minusculas",               
+      });
+}
+
 function msjEncriptar() {
     Swal.fire({
         title: "Encriptando Texto",
@@ -31,63 +39,21 @@ function msjEncriptar() {
             clearInterval(timerInterval);
         }
     }).then((result) => {
-        /* Read more about handling dismissals below */
         if (result.dismiss === Swal.DismissReason.timer) {
             console.log("I was closed by the timer");
         }
     });
 }
 
-function textoValidado() {
-    /*var textoCortado = document.getElementById("textArea1").value;
-    var tamañoTexto = document.getElementById("textArea1").value.length;
-    textoCortado.charAt(indice).toUpperCase() === textoCortado.charAt(indice);
-    for (i=0; i<=tamañoTexto; i++){
-        console.log(i +" de "+ tamañoTexto)
-    } */
-    var indice = 0;
-    var caracterValido = true;
-    var texto = document.getElementById("textArea1").value;
-    var tamañoTexto = document.getElementById("textArea1").value.length - 1;
-
-    while (i < tamañoTexto && texto[i].toUpperCase() === texto[i]) {
-        if (texto.charAt(indice).toUpperCase() === texto.charAt(indice)) {
-            caracterValido = false;
-            console.log("entro")
-        }
-        i++;
-    }
-    console.log(tamañoTexto + " " + caracterNoValido + " " + indice)
-    return caracterNoValido;
-
-    for (var i in texto) {
-        console.log("pos" + i + texto[i])
-    }
-    var texto = document.getElementById("textArea1").value;
-    var caracteresValidos = true;
-    for (var i in texto) {
-        if (texto[i].toUpperCase() === texto[i]) {
-            caracteresValidos = false;
-        }
-    }
-}
-
-
-/*var textoCortado = document.getElementById("textArea1").value;
-        var tamañoTexto = document.getElementById("textArea1").value.length;
-        //textoCortado.charAt(indice).toUpperCase() === textoCortado.charAt(indice);
-        for (i=0; i<tamañoTexto; i++){
-            console.log(i +" de "+ tamañoTexto);            
-        } */
-
 function encriptar() {
     var texto = document.getElementById("textArea1").value;
     texto = texto.replace(/\s+/g, "");
-    var caracteresValidos = true;   
+    var letras = "abcdefghyjklmnñopqrstuvwxyz";
+    var caracteresValidos = true;
     for (var i in texto) {
-        if (texto.charAt(i) > 97 || texto.charAt(i) < 122) {
-            caracteresValidos = false;            
-        }        
+        if (letras.indexOf(texto.charAt(i), 0) == -1) {
+            caracteresValidos = false;
+        }
     }
     if (document.getElementById("textArea1").value.length == 0) {
         msjIngreseTexto();
@@ -106,14 +72,25 @@ function encriptar() {
             location.href = "#textArea2";
         }, 1000);
     } else {
-        alert("caracteres invalidos")
+        msjCaracter();
+        document.getElementById("textArea2").value = "";
+        document.getElementById("textArea2").style = "background-image: url(./img/Muñeco.png)";
     }
 };
 
 function desencriptar() {
+    var texto = document.getElementById("textArea1").value;
+    texto = texto.replace(/\s+/g, "");
+    var letras = "abcdefghyjklmnñopqrstuvwxyz";
+    var caracteresValidos = true;
+    for (var i in texto) {
+        if (letras.indexOf(texto.charAt(i), 0) == -1) {
+            caracteresValidos = false;
+        }
+    }
     if (document.getElementById("textArea1").value.length == 0) {
         msjIngreseTexto();
-    } else {
+    } else if (caracteresValidos) {
         msjEncriptar();
         setTimeout(function () {
             var text = document.getElementById("textArea1").value;
@@ -127,6 +104,10 @@ function desencriptar() {
             document.getElementById("textArea2").style = "background: none;";
             location.href = "#textArea2";
         }, 1000);
+    } else {
+        msjCaracter();
+        document.getElementById("textArea2").value = "";
+        document.getElementById("textArea2").style = "background-image: url(./img/Muñeco.png)";
     }
 };
 
