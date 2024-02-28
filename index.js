@@ -18,7 +18,7 @@ function msjCaracter(){
     Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Solo se admiten letras minusculas",               
+        text: "Solo se admiten letras minusculas sin acentos o tildes",               
       });
 }
 
