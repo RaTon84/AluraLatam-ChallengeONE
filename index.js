@@ -48,7 +48,7 @@ function msjEncriptar() {
 function encriptar() {
     var texto = document.getElementById("textArea1").value;
     texto = texto.replace(/\s+/g, "");
-    var letras = "abcdefghyjklmnñopqrstuvwxyz";
+    var letras = "abcdefghijklmnñopqrstuvwxyz";
     var caracteresValidos = true;
     for (var i in texto) {
         if (letras.indexOf(texto.charAt(i), 0) == -1) {
@@ -81,7 +81,7 @@ function encriptar() {
 function desencriptar() {
     var texto = document.getElementById("textArea1").value;
     texto = texto.replace(/\s+/g, "");
-    var letras = "abcdefghyjklmnñopqrstuvwxyz";
+    var letras = "abcdefghijklmnñopqrstuvwxyz";
     var caracteresValidos = true;
     for (var i in texto) {
         if (letras.indexOf(texto.charAt(i), 0) == -1) {
