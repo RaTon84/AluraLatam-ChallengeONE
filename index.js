@@ -14,12 +14,12 @@ function msjSinTexto() {
     });
 }
 
-function msjCaracter(){
+function msjCaracter() {
     Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Solo se admiten letras minusculas sin acentos o tildes",               
-      });
+        text: "Solo se admiten letras minusculas sin acentos o tildes",
+    });
 }
 
 function msjEncriptar() {
@@ -62,9 +62,9 @@ function encriptar() {
         setTimeout(function () {
             var text = document.getElementById("textArea1").value.toLowerCase();
             var textEncript = text
-                .replace(/a/gi, "ai")
                 .replace(/e/gi, "enter")
                 .replace(/i/gi, "imes")
+                .replace(/a/gi, "ai")
                 .replace(/o/gi, "ober")
                 .replace(/u/gi, "ufat");
             document.getElementById("textArea2").value = textEncript;
@@ -95,9 +95,9 @@ function desencriptar() {
         setTimeout(function () {
             var text = document.getElementById("textArea1").value;
             var textEncript = text
-                .replace(/ai/gi, "a")
                 .replace(/enter/gi, "e")
                 .replace(/imes/gi, "i")
+                .replace(/ai/gi, "a")
                 .replace(/ober/gi, "o")
                 .replace(/ufat/gi, "u");
             document.getElementById("textArea2").value = textEncript;
