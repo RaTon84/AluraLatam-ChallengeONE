@@ -45,8 +45,13 @@ h3 {
 
 #cuadros {  
   padding-right: 7%;
-  padding-left: 7%;
+  padding-left: 7%; 
 }
+
+textarea{
+  resize: none;
+}
+
 section {
   margin-bottom: 2vh;
 }
